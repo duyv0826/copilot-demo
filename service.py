@@ -20,6 +20,16 @@ class GameService:
         player.inventory.append(self.items[item_name])
         return True
 
+    def drop_item(self, player: Player, item_name: str) -> bool:
+        """从背包移除一件物品；若已装备则同时卸下。不存在则返回 False。"""
+        item = self.items.get(item_name)
+        if not item or item not in player.inventory:
+            return False
+        player.inventory.remove(item)
+        if player.equipped.get(item.slot) is item:
+            del player.equipped[item.slot]
+        return True
+
     def equip(self, player: Player, item_name: str) -> bool:
         for item in player.inventory:
             if item.name == item_name:

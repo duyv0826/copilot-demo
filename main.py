@@ -21,7 +21,9 @@ def main() -> None:
         svc.give_item(player, "铁盾")
 
     svc.equip(player, "木剑")
+    svc.drop_item(player, "铁盾")
     print(f"{player.name} 装备了: {[(s.value, i.name) for s, i in player.equipped.items()]}")
+    print(f"背包剩余: {[i.name for i in player.inventory]}")
 
     quest = svc.quests[0]
     if quest.fid not in player.completed_quests:
