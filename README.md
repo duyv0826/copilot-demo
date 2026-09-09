@@ -26,6 +26,17 @@ copilot-demo/
 
 依赖方向：`main → service → storage/models`，`service → models`。
 
+## 文档归档
+
+本项目同时作为学习与练习场，沉淀下来的文档统一归列于此（README 即索引入口）：
+
+| 文档 | 内容 | 适用 |
+|------|------|------|
+| [`Copilot测试小结.md`](Copilot测试小结.md) | AI 编程助手跨文件能力的 5 轮实测（字段添加 / 逻辑修复 / 重构 / 存档闭环 / 自写测试） | Copilot Chat 能力评估 |
+| [`GIT学习笔记.md`](GIT学习笔记.md) | Git 新手实战笔记：初始化 / 提交循环 / 回退 / push-pull / 冲突处理 / 命令速查 | Git / GitHub 入门 |
+
+> 归档约定：所有 `.md` 学习文档统一出现在上方表格；对应代码产物（`models/storage/service/main`、`tests/`）保持本仓库可运行、可测试。
+
 ## 在 VS Code 里打开
 
 1. 用 VS Code 打开 `copilot-demo` 文件夹（File > Open Folder）。
