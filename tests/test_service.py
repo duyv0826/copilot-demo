@@ -64,3 +64,30 @@ def test_completing_same_quest_twice_returns_false_without_second_reward():
     assert player.attack == attack_after_first
     assert player.defense == defense_after_first
     assert player.completed_quests == ["q1"]
+
+
+def test_drop_item_removes_from_inventory():
+    service = make_service()
+    player = Player("测试玩家")
+    service.give_item(player, "木剑")
+
+    assert service.drop_item(player, "木剑") is True
+    assert player.inventory == []
+
+
+def test_drop_item_removes_from_equipped_too():
+    service = make_service()
+    player = Player("测试玩家")
+    service.give_item(player, "木剑")
+    service.equip(player, "木剑")
+
+    assert service.drop_item(player, "木剑") is True
+    assert player.inventory == []
+    assert player.equipped == {}
+
+
+def test_drop_unowned_item_returns_false():
+    service = make_service()
+    player = Player("测试玩家")
+
+    assert service.drop_item(player, "木剑") is False
