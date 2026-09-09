@@ -1,7 +1,15 @@
-# Copilot Chat 测试指南（跨文件理解）
+# copilot-demo
 
-这是一个刻意做成**多文件、强依赖**的小项目，专门用来测 GitHub Copilot Chat 的
-自然语言生成代码和跨文件理解能力。
+一个刻意做成**多文件、强依赖**的 Python 小示例，用来验证 AI 编程助手（如 GitHub
+Copilot Chat）的自然语言生成代码与**跨文件理解**能力。附带 pytest 单测与一份
+覆盖 5 轮测试的小结（见 `Copilot测试小结.md`）。
+
+## 快速运行
+
+```bash
+python main.py      # 运行 CLI 演示（装备 + 任务流程）
+python -m pytest    # 运行单元测试（装备 / 任务 / 存档闭环）
+```
 
 ## 目录结构
 
