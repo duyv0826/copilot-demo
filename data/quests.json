@@ -1,0 +1,6 @@
+{
+  "quests": [
+    { "id": "q1", "title": "讨伐史莱姆", "gold": 20, "exp": 5, "required_item": "木剑" },
+    { "id": "q2", "title": "巡逻要塞", "gold": 15, "exp": 3, "required_item": null }
+  ]
+}

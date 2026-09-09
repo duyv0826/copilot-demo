@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "name": "木剑", "slot": "hand", "attack": 3 },
+    { "name": "铁盾", "slot": "hand", "defense": 4 },
+    { "name": "草帽", "slot": "head", "defense": 1 },
+    { "name": "皮甲", "slot": "body", "defense": 5 }
+  ]
+}

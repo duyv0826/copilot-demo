@@ -1,0 +1,10 @@
+# Python 缓存
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# 运行时生成的存档文件
+data/player_save.json
+
+# 打包产物
+*.zip
